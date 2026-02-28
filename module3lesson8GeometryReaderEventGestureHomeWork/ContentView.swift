@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  module3lesson8GeometryReaderEventGestureHomeWork
-//
-//  Created by Максим Минаков on 27.02.2026.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -14,10 +7,21 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+                .getGeistLiterataFont(.geistRegular, size: 30)
+            
+            Text("Hello, world!")
+                .getGeistLiterataFont(.literataRegular, size: 30)
+            
+            Text("Hello, world!")
+                .getGeistLiterataFont(.literataItalicExtraLightItalic, size: 30)
         }
         .padding()
+        }
     }
-}
+
+
+
+
 
 #Preview {
     ContentView()

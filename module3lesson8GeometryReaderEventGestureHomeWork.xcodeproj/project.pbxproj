@@ -10,9 +10,22 @@
 		858870272F51DB7700699026 /* module3lesson8GeometryReaderEventGestureHomeWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = module3lesson8GeometryReaderEventGestureHomeWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		858870412F51E5ED00699026 /* Exceptions for "module3lesson8GeometryReaderEventGestureHomeWork" folder in "module3lesson8GeometryReaderEventGestureHomeWork" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 858870262F51DB7700699026 /* module3lesson8GeometryReaderEventGestureHomeWork */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		858870292F51DB7700699026 /* module3lesson8GeometryReaderEventGestureHomeWork */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				858870412F51E5ED00699026 /* Exceptions for "module3lesson8GeometryReaderEventGestureHomeWork" folder in "module3lesson8GeometryReaderEventGestureHomeWork" target */,
+			);
 			path = module3lesson8GeometryReaderEventGestureHomeWork;
 			sourceTree = "<group>";
 		};
@@ -256,6 +269,8 @@
 				DEVELOPMENT_TEAM = XM32JTXJC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = module3lesson8GeometryReaderEventGestureHomeWork/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,6 +303,8 @@
 				DEVELOPMENT_TEAM = XM32JTXJC3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = module3lesson8GeometryReaderEventGestureHomeWork/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
