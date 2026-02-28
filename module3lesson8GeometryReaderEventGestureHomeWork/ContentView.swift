@@ -1,28 +1,29 @@
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
+    @Environment(CoreDataAppViewModel.self) var viewModel
+    
+    private var isEditingBinding: Binding<Bool> {
+        Binding(
+            get: { viewModel.isEditing },
+            set: { viewModel.isEditing = $0 }
+        )
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-                .getGeistLiterataFont(.geistRegular, size: 30)
-            
-            Text("Hello, world!")
-                .getGeistLiterataFont(.literataRegular, size: 30)
-            
-            Text("Hello, world!")
-                .getGeistLiterataFont(.literataItalicExtraLightItalic, size: 30)
-        }
-        .padding()
+        NavigationStack{
+            CoreTableUIKitRepresentableView(isEditing: isEditingBinding)
+                .navigationDestination(isPresented: isEditingBinding){
+                    TableCustomCellRepresentableView()
+                        .environment(viewModel)
+                        .navigationTitle("Какой-то заголовок))")
+                }
         }
     }
-
-
-
-
-
-#Preview {
-    ContentView()
 }
+
+
+
+
+

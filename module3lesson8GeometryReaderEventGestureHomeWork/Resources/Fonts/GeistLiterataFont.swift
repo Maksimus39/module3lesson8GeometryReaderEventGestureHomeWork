@@ -1,7 +1,5 @@
 import SwiftUI
 
-
-
 enum GeistLiterataFont: String {
     // Geist
     case geistRegular = "Geist-Regular"
