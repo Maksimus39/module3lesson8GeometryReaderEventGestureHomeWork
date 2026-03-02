@@ -57,7 +57,7 @@ struct CoreTableUIKitRepresentableView: UIViewRepresentable {
             label.text = data.footer
             label.font = UIFont(
                 name: GeistLiterataFont.literataRegularBold.rawValue,
-                size: 17
+                size: 18
             ) ?? UIFont.systemFont(ofSize: 18)
             label.textColor = .secondaryLabel
             label.translatesAutoresizingMaskIntoConstraints = false

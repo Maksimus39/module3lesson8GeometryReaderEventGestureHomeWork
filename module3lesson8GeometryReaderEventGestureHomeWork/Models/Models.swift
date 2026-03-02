@@ -2,14 +2,14 @@ import Foundation
 
 enum GestureType: String, CaseIterable {
     case onAppear
-    case GeometryProxy
     case onDisappear
     case task
     case onChange
     case TapGesture
     case LongPressGesture
     case DragGesture
-    case ANIMATION
+    case GeometryProxy
+    case Animation
 }
 
 struct CoreTable: Identifiable {
@@ -24,8 +24,17 @@ struct TableCustomCell: Identifiable {
     let title: String
     let image: String
     let description: String
+    let type: GestureType
 }
 
+struct DescriptionOnAppear: Identifiable {
+    let id: String = UUID().uuidString
+    let tabItemOnAppear: String
+    let textOnAppear: String
+    let isAppeared: Bool
+    let appearCount: Int
+    let itemCountOnAppear: Int
+}
 
 struct GestureDemo {
     let id: String = UUID().uuidString
@@ -33,6 +42,7 @@ struct GestureDemo {
     let coreTable: [CoreTable]
     let isEditing: Bool = false
     let tableCustomCell: [TableCustomCell]
+    let descriptionOnAppear: [DescriptionOnAppear]
 }
 
 
