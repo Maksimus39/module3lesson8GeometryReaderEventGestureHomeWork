@@ -1,19 +1,19 @@
 import SwiftUI
 
-struct OnAppearDemonstrationView: View {
+struct OnDisappearDemonstrationView: View {
     @Environment(CoreDataAppViewModel.self) var viewModel
     
     var body: some View {
         let descriptionText = viewModel.tableCustomCell
-            .first(where: { $0.type == .onAppear })?.description
+            .first(where: { $0.type == .onDisappear })?.description
         ?? "Описание отсутствует"
         
         let title = viewModel.tableCustomCell
-            .first(where: { $0.type == .onAppear })?.title
-        ?? "onAppear"
+            .first(where: { $0.type == .onDisappear })?.title
+        ?? "onDisappear"
         
-        let tabItem = viewModel.descriptionOnAppear.first?.tabItemOnAppear ?? "Описание"
-        let demoItem = viewModel.descriptionOnAppear.first?.textOnAppear ?? "Демо"
+        let descriptionDisappear = viewModel.descriptionOnDisappear.first?.descriptionDisappear ?? "Описание"
+        let demoDisappear = viewModel.descriptionOnDisappear.first?.demoDisappear ?? "Демо"
         
         TabView {
             ScrollView(.vertical) {
@@ -21,18 +21,17 @@ struct OnAppearDemonstrationView: View {
                     .font(.custom(GeistLiterataFont.literataRegularBold.rawValue, size: 18))
                     .foregroundColor(.secondary)
                     .padding()
-                    .frame(maxWidth: .infinity)
             }
             .tabItem {
                 Image(systemName: "pencil.and.list.clipboard")
-                Text(tabItem)
+                Text(descriptionDisappear)
             }
             
             
-            OnAppearDemoContent()
+            SimpleOnDisappearDemo()
                 .tabItem {
                     Image(systemName: "eye")
-                    Text(demoItem)
+                    Text(demoDisappear)
                 }
         }
         .navigationTitle(title)

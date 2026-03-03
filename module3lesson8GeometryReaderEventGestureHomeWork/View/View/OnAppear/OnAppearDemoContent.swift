@@ -11,7 +11,7 @@ struct OnAppearDemoContent: View {
                 .overlay {
                     Text(viewModel.isAppeared ? "Появился ✅" : "Ожидает появления...")
                         .foregroundColor(.white)
-                        .bold()
+                        .font(.custom(GeistLiterataFont.literataRegularBold.rawValue, size: 18))
                 }
                 .onAppear {
                     viewModel.isAppeared = true
@@ -22,15 +22,15 @@ struct OnAppearDemoContent: View {
                 }
             
             Text("Количество появлений: \(viewModel.appearCount)")
-                .font(.title2)
+                .font(.custom(GeistLiterataFont.literataRegularBold.rawValue, size: 18))
                 .foregroundColor(.primary)
             
             Text("""
                 Как это работает:
-                • При первом открытии экрана — срабатывает onAppear
-                • При свайпе влево/вправо и возврате — срабатывает снова
+                При первом открытии экрана — срабатывает onAppear
+                При свайпе влево/вправо и возврате — срабатывает снова
                 """)
-            .font(.callout)
+            .font(.custom(GeistLiterataFont.literataRegularBold.rawValue, size: 18))
             .foregroundColor(.secondary)
             .multilineTextAlignment(.center)
             .padding(.horizontal)
@@ -38,6 +38,7 @@ struct OnAppearDemoContent: View {
             Button("Сбросить счётчик") {
                 viewModel.resetAppearState()
             }
+            .font(.custom(GeistLiterataFont.literataRegularBold.rawValue, size: 18))
             .buttonStyle(.bordered)
             .padding(.top, 10)
         }

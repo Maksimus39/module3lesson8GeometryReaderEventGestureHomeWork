@@ -36,6 +36,12 @@ struct DescriptionOnAppear: Identifiable {
     let itemCountOnAppear: Int
 }
 
+struct DescriptionOnDisappear: Identifiable {
+    let id: String = UUID().uuidString
+    let descriptionDisappear: String
+    let demoDisappear: String
+}
+
 struct GestureDemo {
     let id: String = UUID().uuidString
     let typeGesture: GestureType
@@ -43,6 +49,7 @@ struct GestureDemo {
     let isEditing: Bool = false
     let tableCustomCell: [TableCustomCell]
     let descriptionOnAppear: [DescriptionOnAppear]
+    let descriptionOnDisappear: [DescriptionOnDisappear]
 }
 
 

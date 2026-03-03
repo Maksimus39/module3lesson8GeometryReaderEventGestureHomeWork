@@ -166,4 +166,11 @@ class DataManager {
                                 itemCountOnAppear: 1)
         ]
     }
+    
+    func getOnDisappearData() -> [DescriptionOnDisappear] {
+        return [
+            DescriptionOnDisappear(descriptionDisappear: "Описание",
+                                   demoDisappear: "Демо",)
+        ]
+    }
 }

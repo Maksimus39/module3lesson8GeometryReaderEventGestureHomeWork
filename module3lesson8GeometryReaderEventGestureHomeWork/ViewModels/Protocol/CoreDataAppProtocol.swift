@@ -5,4 +5,5 @@ protocol CoreDataAppProtocol {
     var isEditingCoreTable: Bool { get set }
     var tableCustomCell: [TableCustomCell] { get set }
     var descriptionOnAppear: [DescriptionOnAppear] { get set }
+    var descriptionOnDisappear: [DescriptionOnDisappear] { get set }
 }
