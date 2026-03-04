@@ -38,7 +38,19 @@ import UIKit
     var offset = CGSize.zero
     var isDragging = false
     
+    // state animation
+    var onLeftSide: Bool = false
+    var barWidth: CGFloat = 300
+    var barHeight: CGFloat = 24
+    var markerWidth: CGFloat {
+        barWidth / 3
+    }
     
+    var markerOfSet: CGFloat {
+        barWidth * 0.65
+    }
+    
+    // -----------------------------------------------
     var coreTable: [CoreTable] = []
     var tableCustomCell: [TableCustomCell] = []
     var descriptionOnAppear: [DescriptionOnAppear] = []
