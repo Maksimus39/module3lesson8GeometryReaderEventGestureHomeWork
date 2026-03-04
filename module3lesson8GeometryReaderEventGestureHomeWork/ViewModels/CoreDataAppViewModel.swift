@@ -29,6 +29,11 @@ import UIKit
     // состояние LongPressGesture
     var isCompletedLongPressGesture: Bool = false
     
+    // состояние DragGesture
+    var isAnimating: Bool = false
+    var imageScale: CGFloat = 1
+    var imageOffSet: CGSize = .zero
+    
     
     var coreTable: [CoreTable] = []
     var tableCustomCell: [TableCustomCell] = []
