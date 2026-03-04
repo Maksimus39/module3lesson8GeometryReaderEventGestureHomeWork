@@ -5,34 +5,38 @@ import UIKit
     let id: String = UUID().uuidString
     var isEditingCoreTable: Bool = false
     
-    // Состояние onAppear
+    // state onAppear
     var isAppeared: Bool = false
     var appearCount: Int = 0
     
-    // Состояние для onDisappear (таймер)
+    // state onDisappear (таймер)
     var isRunning: Bool = false
     var counterOnDisappear: Int = 0
     var timerOnDisappear: Timer? = nil
     let timerInterval: Double = 1.0
     let initialCounter: Int = 0
     
-    // Состояние task
+    // state task
     var imageTask: UIImage? = nil
     let url = "https://loremflickr.com/200/200/nature"
     
-    // состояние blurAmount
+    // state blurAmount
     var blurAmount: Double = 0.0
     
-    // состояние tapGeture
+    // state tapGeture
     var isSelected: Bool = false
     
-    // состояние LongPressGesture
+    // state LongPressGesture
     var isCompletedLongPressGesture: Bool = false
     
-    // состояние DragGesture
+    // state DragGesture
     var isAnimating: Bool = false
     var imageScale: CGFloat = 1
     var imageOffSet: CGSize = .zero
+    
+    // state geometryProxy
+    var offset = CGSize.zero
+    var isDragging = false
     
     
     var coreTable: [CoreTable] = []
