@@ -12,9 +12,6 @@ struct OnAppearDemonstrationView: View {
             .first(where: { $0.type == .onAppear })?.title
         ?? "onAppear"
         
-        let tabItem = viewModel.descriptionOnAppear.first?.tabItemOnAppear ?? "Описание"
-        let demoItem = viewModel.descriptionOnAppear.first?.textOnAppear ?? "Демо"
-        
         TabView {
             ScrollView(.vertical) {
                 Text(descriptionText)
@@ -25,14 +22,13 @@ struct OnAppearDemonstrationView: View {
             }
             .tabItem {
                 Image(systemName: "pencil.and.list.clipboard")
-                Text(tabItem)
+                Text("Описание")
             }
-            
             
             OnAppearDemoContent()
                 .tabItem {
                     Image(systemName: "eye")
-                    Text(demoItem)
+                    Text("Демо")
                 }
         }
         .navigationTitle(title)

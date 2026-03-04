@@ -20,12 +20,13 @@ import UIKit
     var imageTask: UIImage? = nil
     let url = "https://loremflickr.com/200/200/nature"
     
+    // состояние blurAmount
+    var blurAmount: Double = 0.0
+    
     
     var coreTable: [CoreTable] = []
     var tableCustomCell: [TableCustomCell] = []
     var descriptionOnAppear: [DescriptionOnAppear] = []
-    var descriptionOnDisappear: [DescriptionOnDisappear] = []
-    var taskDemonstration: [TaskDemonstration] = []
     
     private let dataCoreTable = DataManager()
     var typeGesture: [GestureType]
@@ -35,7 +36,6 @@ import UIKit
         loadCoreTable()
         loadTableCustomCells()
         loadOnAppearData()
-        loadTask()
     }
     
     
@@ -70,11 +70,6 @@ import UIKit
         appearCount = 0
     }
     
-    func loadOnDisappearData() {
-        let descriptionOnDisappear = dataCoreTable.getOnDisappearData()
-        self.descriptionOnDisappear = descriptionOnDisappear
-    }
-    
     func startTimer() {
         stopTimer()
         
@@ -90,11 +85,6 @@ import UIKit
         timerOnDisappear?.invalidate()
         timerOnDisappear = nil
         isRunning = false
-    }
-    
-    func loadTask(){
-        let taskDemonstration = dataCoreTable.getOnTaskData()
-        self.taskDemonstration = taskDemonstration
     }
     
     func fetchImageData(url: String) async {

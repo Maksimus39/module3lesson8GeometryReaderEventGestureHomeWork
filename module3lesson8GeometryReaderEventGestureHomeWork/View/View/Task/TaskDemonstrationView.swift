@@ -12,10 +12,6 @@ struct TaskDemonstrationView: View {
             .first(where: { $0.type == .task })?.title
         ?? "task"
         
-        let tabItem = viewModel.taskDemonstration.first?.descriptionTask ?? "Описание"
-        let demoItem = viewModel.taskDemonstration.first?.demoTask ?? "Демо"
-        
-        
         TabView {
             ScrollView(.vertical) {
                 Text(text)
@@ -25,12 +21,12 @@ struct TaskDemonstrationView: View {
             }
             .tabItem {
                 Image(systemName: "pencil.and.list.clipboard")
-                Text(tabItem)
+                Text("Описание")
             }
             SimpleOnTaskDemo()
                 .tabItem {
                     Image(systemName: "eye")
-                    Text(demoItem)
+                    Text("Демо")
                 }
         }
         .navigationTitle(title)

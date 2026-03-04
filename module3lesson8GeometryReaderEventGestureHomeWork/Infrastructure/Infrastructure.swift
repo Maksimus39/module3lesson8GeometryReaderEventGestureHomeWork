@@ -159,24 +159,9 @@ class DataManager {
     
     func getOnAppearData() -> [DescriptionOnAppear] {
         return [
-            DescriptionOnAppear(tabItemOnAppear: "Описание",
-                                textOnAppear: "Демо",
-                                isAppeared: false,
-                                appearCount: 0,
-                                itemCountOnAppear: 1)
-        ]
-    }
-    
-    func getOnDisappearData() -> [DescriptionOnDisappear] {
-        return [
-            DescriptionOnDisappear(descriptionDisappear: "Описание",
-                                   demoDisappear: "Демо",)
-        ]
-    }
-    
-    func getOnTaskData() -> [TaskDemonstration] {
-        return [
-           TaskDemonstration(descriptionTask: "Описание", demoTask: "Демо")
+            DescriptionOnAppear(  isAppeared: false,
+                                  appearCount: 0,
+                                  itemCountOnAppear: 1)
         ]
     }
 }

@@ -29,23 +29,16 @@ struct TableCustomCell: Identifiable {
 
 struct DescriptionOnAppear: Identifiable {
     let id: String = UUID().uuidString
-    let tabItemOnAppear: String
-    let textOnAppear: String
     let isAppeared: Bool
     let appearCount: Int
     let itemCountOnAppear: Int
 }
 
-struct DescriptionOnDisappear: Identifiable {
-    let id: String = UUID().uuidString
-    let descriptionDisappear: String
-    let demoDisappear: String
-}
 
-struct TaskDemonstration: Identifiable {
+struct OnChangeDemonstration: Identifiable {
     let id: String = UUID().uuidString
-    let descriptionTask: String
-    let demoTask: String
+    let descriptionOnChange: String
+    let demoOnChange: String
 }
 
 struct GestureDemo {
@@ -55,8 +48,8 @@ struct GestureDemo {
     let isEditing: Bool = false
     let tableCustomCell: [TableCustomCell]
     let descriptionOnAppear: [DescriptionOnAppear]
-    let descriptionOnDisappear: [DescriptionOnDisappear]
-    let taskDemonstration: [TaskDemonstration]
+    let onChangeDemonstration: [OnChangeDemonstration]
+    
 }
 
 
