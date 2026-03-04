@@ -23,6 +23,12 @@ import UIKit
     // состояние blurAmount
     var blurAmount: Double = 0.0
     
+    // состояние tapGeture
+    var isSelected: Bool = false
+    
+    // состояние LongPressGesture
+    var isCompletedLongPressGesture: Bool = false
+    
     
     var coreTable: [CoreTable] = []
     var tableCustomCell: [TableCustomCell] = []

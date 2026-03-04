@@ -34,7 +34,6 @@ struct DescriptionOnAppear: Identifiable {
     let itemCountOnAppear: Int
 }
 
-
 struct OnChangeDemonstration: Identifiable {
     let id: String = UUID().uuidString
     let descriptionOnChange: String
