@@ -173,4 +173,10 @@ class DataManager {
                                    demoDisappear: "Демо",)
         ]
     }
+    
+    func getOnTaskData() -> [TaskDemonstration] {
+        return [
+           TaskDemonstration(descriptionTask: "Описание", demoTask: "Демо")
+        ]
+    }
 }

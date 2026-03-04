@@ -1,8 +1,11 @@
 import Foundation
+import UIKit
 
 @Observable class CoreDataAppViewModel: CoreDataAppProtocol {
     let id: String = UUID().uuidString
     var isEditingCoreTable: Bool = false
+    
+    // Состояние onAppear
     var isAppeared: Bool = false
     var appearCount: Int = 0
     
@@ -13,11 +16,16 @@ import Foundation
     let timerInterval: Double = 1.0
     let initialCounter: Int = 0
     
+    // Состояние task
+    var imageTask: UIImage? = nil
+    let url = "https://loremflickr.com/200/200/nature"
+    
     
     var coreTable: [CoreTable] = []
     var tableCustomCell: [TableCustomCell] = []
     var descriptionOnAppear: [DescriptionOnAppear] = []
     var descriptionOnDisappear: [DescriptionOnDisappear] = []
+    var taskDemonstration: [TaskDemonstration] = []
     
     private let dataCoreTable = DataManager()
     var typeGesture: [GestureType]
@@ -27,6 +35,7 @@ import Foundation
         loadCoreTable()
         loadTableCustomCells()
         loadOnAppearData()
+        loadTask()
     }
     
     
@@ -81,5 +90,21 @@ import Foundation
         timerOnDisappear?.invalidate()
         timerOnDisappear = nil
         isRunning = false
+    }
+    
+    func loadTask(){
+        let taskDemonstration = dataCoreTable.getOnTaskData()
+        self.taskDemonstration = taskDemonstration
+    }
+    
+    func fetchImageData(url: String) async {
+        do {
+            guard let url = URL(string: url) else { return }
+            let (data, _) = try await URLSession.shared.data(from: url)
+            self.imageTask = UIImage(data: data)
+            
+        } catch {
+            print("\(error.localizedDescription)")
+        }
     }
 }
