@@ -20,13 +20,11 @@ struct TapGestureDemonstrationView: View {
                     .padding()
             }
             .tabItem {
-                Image(systemName: "pencil.and.list.clipboard")
-                Text("Описание")
+                GetTabItemDescription()
             }
             TapGestureDemonstration()
                 .tabItem {
-                    Image(systemName: "eye")
-                    Text("Демо")
+                    GetTabItemDemo()
                 }
         }
         .navigationTitle(title)

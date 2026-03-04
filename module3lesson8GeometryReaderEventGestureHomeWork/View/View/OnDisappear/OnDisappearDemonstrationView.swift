@@ -20,15 +20,13 @@ struct OnDisappearDemonstrationView: View {
                     .padding()
             }
             .tabItem {
-                Image(systemName: "pencil.and.list.clipboard")
-                Text("Описание")
+                GetTabItemDescription()
             }
             
             
             SimpleOnDisappearDemo()
                 .tabItem {
-                    Image(systemName: "eye")
-                    Text("Демо")
+                    GetTabItemDemo()
                 }
         }
         .navigationTitle(title)

@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 struct DragGestureDemonstrationView: View {
     @Environment(CoreDataAppViewModel.self) var viewModel
     
@@ -22,14 +21,12 @@ struct DragGestureDemonstrationView: View {
                     .frame(maxWidth: .infinity)
             }
             .tabItem {
-                Image(systemName: "pencil.and.list.clipboard")
-                Text("Описание")
+                GetTabItemDescription()
             }
             
             DragGestureDemonstration()
                 .tabItem {
-                    Image(systemName: "eye")
-                    Text("Демо")
+                    GetTabItemDemo()
                 }
         }
         .navigationTitle(title)

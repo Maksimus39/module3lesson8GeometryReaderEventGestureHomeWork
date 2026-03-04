@@ -50,6 +50,12 @@ import UIKit
         barWidth * 0.65
     }
     
+    // state description & demo
+    var imageDescription: String = "pencil.and.list.clipboard"
+    var textDescription = "Описание"
+    var imageDemo: String = "eye"
+    var textDemo: String = "Демо"
+    
     // -----------------------------------------------
     var coreTable: [CoreTable] = []
     var tableCustomCell: [TableCustomCell] = []

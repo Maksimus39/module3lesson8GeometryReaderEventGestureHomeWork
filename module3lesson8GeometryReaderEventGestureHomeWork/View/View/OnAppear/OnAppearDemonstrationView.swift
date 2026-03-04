@@ -21,14 +21,12 @@ struct OnAppearDemonstrationView: View {
                     .frame(maxWidth: .infinity)
             }
             .tabItem {
-                Image(systemName: "pencil.and.list.clipboard")
-                Text("Описание")
+                GetTabItemDescription()
             }
             
             OnAppearDemoContent()
                 .tabItem {
-                    Image(systemName: "eye")
-                    Text("Демо")
+                    GetTabItemDemo()
                 }
         }
         .navigationTitle(title)

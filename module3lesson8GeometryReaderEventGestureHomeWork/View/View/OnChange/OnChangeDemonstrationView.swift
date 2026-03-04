@@ -22,14 +22,12 @@ struct OnChangeDemonstrationView: View {
                     .frame(maxWidth: .infinity)
             }
             .tabItem {
-                Image(systemName: "pencil.and.list.clipboard")
-                Text("Описание")
+                GetTabItemDescription()
             }
             
             OnChangeDemoContent()
                 .tabItem {
-                    Image(systemName: "eye")
-                    Text("Демо")
+                    GetTabItemDemo()
                 }
         }
         .navigationTitle(title)

@@ -21,14 +21,12 @@ struct LongPressGestureDemonstrationView: View {
                     .frame(maxWidth: .infinity)
             }
             .tabItem {
-                Image(systemName: "pencil.and.list.clipboard")
-                Text("Описание")
+                GetTabItemDescription()
             }
             
             LongPressGestureDetailView()
                 .tabItem {
-                    Image(systemName: "eye")
-                    Text("Демо")
+                    GetTabItemDemo()
                 }
         }
         .navigationTitle(title)
